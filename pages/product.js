@@ -14,10 +14,15 @@
     return (
       
       <div className={styles.container}>  
+      <Head>
+        <title>product</title>
+        <meta name="Product" content="Get products" />
+        <Link href="/dist/output.css" rel="stylesheet">
+      </Head>
         <div>
-          <ul className="list-group">
+          <ul>
               {products.data[0].map(product => (
-                <><li className="list-group-item">{product.name}</li><li className="list-group-item">{product.price}</li><li className="list-group-item">{product.description}</li></>
+                <><li>{product.name}</li><li className="list-group-item">{product.price}</li><li className="list-group-item">{product.description}</li></>
               ))}
           </ul>
         </div>
