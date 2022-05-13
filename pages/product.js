@@ -15,11 +15,18 @@
       
       <div className={styles.container}>  
         <div>
-          <ul className="list-group">
               {products.data[0].map(product => (
-                <><li className="list-group-item">{product.name}</li><li className="list-group-item">{product.price}</li><li className="list-group-item">{product.description}</li></>
+                <>
+                <div id={styles.card} className="card">
+                  <div className="card-body">
+                  <h5 className="card-title">{product.name}</h5>
+                  <p className="card-text">{product.price}</p>
+                  <p className="card-text">{product.description}</p>
+                  <a href="#" className="btn btn-primary">Détail</a>
+                  </div>
+                </div>
+                </>              
               ))}
-          </ul>
         </div>
       </div>
     )
